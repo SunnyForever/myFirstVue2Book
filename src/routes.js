@@ -5,9 +5,9 @@ import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
-import Page4 from './views/nav2/Page4.vue'
-import Page5 from './views/nav2/Page5.vue'
-import Page6 from './views/nav3/Page6.vue'
+import C2_1 from './views/C2/C2_1.vue'
+import C2_2 from './views/C2/C2_2.vue'
+import C2_3 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
 
 let routes = [
@@ -27,7 +27,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '第一章 Vue简介',
+        name: '第一章 Vue 简介',
         iconCls: 'el-icon-document',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
@@ -42,10 +42,11 @@ let routes = [
         name: '第二章 数据',
         iconCls: 'el-icon-date',//图标样式class
         children: [
-            { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/table', component: Table, name: 'Table' },
-            { path: '/form', component: Form, name: 'Form' },
-            { path: '/user', component: user, name: '列表' },
+            { path: '/2.1', component: C2_1, name: 'C2.1 字符串' },
+            { path: '/2.2', component: C2_2, name: 'C2.2 数组' },
+            { path: '/2.3', component: Form, name: 'C2.3 集合' },
+            { path: '/2.4', component: user, name: 'C2.4 数据拷贝' },
+            { path: '/2.5', component: user, name: 'C2.5 常见问题解析' },
         ]
     },
     {
@@ -148,15 +149,12 @@ let routes = [
         path: '/',
         component: Home,
         name: '第十一章 UI一致性',
-        iconCls: 'el-icon-message',//图标样式class
+        iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/table', component: Table, name: 'Table' },
-            { path: '/form', component: Form, name: 'Form' },
-            { path: '/user', component: user, name: '列表' },
+            { path: '/echarts', component: echarts, name: 'echarts' }
         ]
     },
-    {
+/*    {
         path: '/',
         component: Home,
         name: '导航二',
@@ -184,7 +182,7 @@ let routes = [
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' }
         ]
-    },
+    },*/
     {
         path: '*',
         hidden: true,

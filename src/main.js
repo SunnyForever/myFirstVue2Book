@@ -14,6 +14,10 @@ import Mock from './mock'
 Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
 
+import VueHighlightJS from 'vue-highlightjs'
+import 'highlight.js/styles/atom-one-dark.css'
+Vue.use(VueHighlightJS)
+
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
